@@ -5,18 +5,18 @@ import java.util.List;
 
 // invoker 역할입니다.
 public class GameUser {
-    private final List<Attack> attacks = new ArrayList<>();
+    private final List<AttackCommand> attackCommands = new ArrayList<>();
 
     public GameUser() {
     }
 
-    public void addAttack(Attack attack) {
-        attacks.add(attack);
+    public void addAttackCommand(AttackCommand attackCommand) {
+        attackCommands.add(attackCommand);
     }
 
-    public void executeAttacks() {
-        for (Attack attack : attacks) {
-            attack.attack();
+    public void executeAttackCommands() {
+        for (AttackCommand attackCommand : attackCommands) {
+            attackCommand.attack();
         }
     }
 }

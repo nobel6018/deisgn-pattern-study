@@ -1,6 +1,6 @@
 package me.leedo.designpattern.command2;
 
-public class KaisaAttackCommand implements Attack {
+public class KaisaAttackCommand implements AttackCommand {
     private final Kaisa kaisa;
     private final AQWER keyboardInput;
 

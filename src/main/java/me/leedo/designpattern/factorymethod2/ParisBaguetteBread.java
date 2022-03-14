@@ -10,7 +10,7 @@ public class ParisBaguetteBread implements Bread {
 
     @Override
     public void info() {
-        System.out.println("파바 빵: " + name);
+        System.out.println("파바 빵: " + name + ", 선물 포장: " + giftWrapped);
     }
 
     public void setGiftWrapped(boolean giftWrapped) {

@@ -13,3 +13,7 @@ public class Singleton {
         return instance;
     }
 }
+
+// ref:
+// https://jeong-pro.tistory.com/86
+// https://javaplant.tistory.com/21yo

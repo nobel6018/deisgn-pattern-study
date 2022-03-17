@@ -15,10 +15,21 @@ public class BridgePatternApplication {
         faker.playGame();
         faker.increaseWinCount();
         System.out.println("faker.getWinCount() = " + faker.getWinCount());
+        /*
+        * 롤 게임 유저입니다
+        * 페이커 급 무빙. 롤 중 🔥
+        * faker.getWinCount() = 1
+        * */
+
 
         parkDaeHo.gamerInfo();
         parkDaeHo.playGame();
         parkDaeHo.increaseWinCount();
         System.out.println("parkDaeHo.getWinCount() = " + parkDaeHo.getWinCount());
+        /*
+        * 스타크래프트 게임 유저입니다
+        * 스타 빡겜 중 🔥
+        * parkDaeHo.getWinCount() = 1
+        * */
     }
 }

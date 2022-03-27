@@ -7,7 +7,7 @@ public class DecoratorApplication {
         ahri = new DoranRing(ahri);
         ahri = new Mejai(ahri);
 
-        System.out.println("👊 아리 공격력 = " + ahri.getAttackDamage());
+        System.out.println("👊 아리 물리 공격력 = " + ahri.getAttackDamage());
         System.out.println("🪄 아리 마법 공격력 = " + ahri.getAbilityPower());
 
         // 👩‍🎤 카이사 + 💍 도란링 + ⚔️ 마나무네
@@ -15,7 +15,7 @@ public class DecoratorApplication {
         kaisa = new DoranRing(kaisa);
         kaisa = new Manamune(kaisa);
 
-        System.out.println("👊 카이사 공격력 = " + kaisa.getAttackDamage());
+        System.out.println("👊 카이사 물리 공격력 = " + kaisa.getAttackDamage());
         System.out.println("🪄 카이사 마법 공격력 = " + kaisa.getAbilityPower());
     }
 }

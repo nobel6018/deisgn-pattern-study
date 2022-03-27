@@ -1,6 +1,5 @@
 package me.leedo.designpattern.decorator;
 
-// 예제: 롤 챔피언에게 마법 주문력, 공격력 아이템 추가
 public class Customer {
     public static void main(String[] args) {
         Beverage americano = new Americano();

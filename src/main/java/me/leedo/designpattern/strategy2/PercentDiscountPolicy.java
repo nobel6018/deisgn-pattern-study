@@ -1,11 +1,18 @@
 package me.leedo.designpattern.strategy2;
 
+import java.time.LocalTime;
+
 public class PercentDiscountPolicy implements DiscountPolicy {
 
     private final int discountPercent;
 
     public PercentDiscountPolicy(int discountPercent) {
         this.discountPercent = discountPercent;
+    }
+
+    @Override
+    public boolean support(LocalTime time) {
+        return time.isAfter(LocalTime.of(20, 0, 0));
     }
 
     @Override

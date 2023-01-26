@@ -6,23 +6,23 @@ import java.util.List;
 public class StrategyApplication {
     public static void main(String[] args) {
 
-        PriceCalculator priceCalculator = new PriceCalculator();
+        PriceCalculator priceCalculator = new PriceCalculator(
+            Arrays.asList(
+                new PercentDiscountPolicy(50),
+                new FixAmountDiscountPolicy(2_000)
+            )
+        );
 
         List<Integer> itemPrices = Arrays.asList(1000, 2000, 3000);
 
-        // 🎉 오픈할인: 5퍼센트 할인 행사
-        PercentDiscountPolicy fivePercentDiscountPolicy = new PercentDiscountPolicy(5);
-        priceCalculator.setDiscountPolicy(fivePercentDiscountPolicy);
-
-        int salePrice = priceCalculator.getSalePrice(itemPrices);
-        System.out.println("salePrice = " + salePrice);
+        // 🌞 오전: 오픈 기념 2천원 정액할인 (저녁 10시 이전)
+        int morningPrice = priceCalculator.getDiscountedPrice(itemPrices);
+        System.out.println("morningPrice = " + morningPrice);  // morningPrice = 4000
 
 
-        // 🎉 마감할인: 2천원 고정할인 행사 시작
-        FixAmountDiscountPolicy fixAmountDiscountPolicy = new FixAmountDiscountPolicy(2_000);
-        priceCalculator.setDiscountPolicy(fixAmountDiscountPolicy);
-
-        int salePrice2 = priceCalculator.getSalePrice(itemPrices);
-        System.out.println("salePrice2 = " + salePrice2);
+        // ⌛️ 같은 코드를 시간이 지나서 저녁 10시가 되었다고 가정...
+        // 🌜 저녁: 마감 50% 할인 (저녁 10시 이후)
+        int nightPrice = priceCalculator.getDiscountedPrice(itemPrices);
+        System.out.println("nightPrice = " + nightPrice);  // nightPrice = 3000
     }
 }
